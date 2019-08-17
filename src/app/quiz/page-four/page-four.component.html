@@ -1,0 +1,22 @@
+<h1> Summary:</h1>
+<h3> Hello: {{userName}}</h3>
+<h3> Here are the answers selected:</h3>
+<h4> Who is the best cricketer in the world?: {{answer1}}</h4>
+<h4> What are the colors in the national flag?:</h4>
+<div *ngFor= "let colour of answer2">
+  <h4> {{colour}}</h4>
+</div>
+<button class="btn-primary" (click)="onClickFinish($event)">FINISH </button>
+<button class="btn-primary" (click)="onClickHistory($event)">HISTORY </button>
+<div *ngIf="viewHistory"> 
+<div *ngFor="let quiz of quizzesArray">
+  <h1> Summary:</h1>
+  <h3> Hello: {{quiz.firstName}}</h3>
+  <h3> Here are the answers selected:</h3>
+  <h4> Who is the best cricketer in the world?: {{quiz.quest1}}</h4>
+  <h4> What are the colors in the national flag?:</h4>
+  <!-- <div *ngFor= "let colour of flagColours"> -->
+    <h4> {{quiz.quest2}}</h4>
+  <!-- </div> -->
+</div>
+</div>

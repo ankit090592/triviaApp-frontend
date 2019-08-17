@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-ques my-5">
+        <div class="card-body">
+
+          <h5 class="card-title text-center">Question 2</h5>
+          <h4> Who is the best cricketer in the world?</h4>
+          <form class="form-ques" #quizForm="ngForm" (ngSubmit)="onFormSubmit(quizForm)">
+
+
+            <div class="form-label-group">
+              <input type="radio" value="Sachin Tendulkar" name="player" [ngModel]="model.player" required #player="ngModel"> Sachin Tendulkar
+              <input type="radio" value="Virat Kohli" name="player" [ngModel]="model.player" required #player="ngModel"> Virat Kohli
+              <input type="radio" value="Adam Gilchrist" name="player" [ngModel]="model.player" required #player="ngModel"> Adam Gilchrist
+              <input type="radio" value="Jacques Kallis" name="player" [ngModel]="model.player" required #player="ngModel"> Jacques Kallis
+              <div *ngIf="player.invalid && quizForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+                Answer required.
+              </div>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Next</button>
+            <hr class="my-4">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

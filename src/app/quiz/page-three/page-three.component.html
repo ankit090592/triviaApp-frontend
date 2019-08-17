@@ -1,0 +1,8 @@
+<h1> Question 3:</h1>
+<h3>What are the colors in the Indian national flag? Select all:</h3>
+<form [formGroup]="myForm">
+	<div *ngFor="let data of options">
+		<input type="checkbox" (change)="onChange(data.option, $event.target.checked)"> {{data.option}}<br>
+	</div>
+</form>
+<button class="btn btn-primary" (click)="onClickSubmit($event)"> NEXT</button>
